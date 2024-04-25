@@ -1,23 +1,23 @@
 package Model;
 
-public class Product {
+import java.util.ArrayList;
+
+public class Section {
 	
 	private int ID;
+	private ArrayList<Product> products;
 	private String name;
 	private String description;
-	private double price;
-	private int qty;
 	
-	public Product() {
+	public Section() {
 		
 	}
 	
-	public Product(int ID, String name, String description, double price, int qty) {
+	public Section(int ID, String name, ArrayList<Product> products, String description) {
 		this.ID = ID;
 		this.name = name;
+		this.products = products;
 		this.description = description;
-		this.price = price;
-		this.qty = qty;
 	}
 
 	public int getID() {
@@ -26,6 +26,14 @@ public class Product {
 
 	public void setID(int iD) {
 		ID = iD;
+	}
+
+	public ArrayList<Product> getProducts() {
+		return products;
+	}
+
+	public void setProducts(ArrayList<Product> products) {
+		this.products = products;
 	}
 
 	public String getName() {
@@ -42,22 +50,6 @@ public class Product {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public int getQty() {
-		return qty;
-	}
-
-	public void setQty(int qty) {
-		this.qty = qty;
 	}
 	
 }
